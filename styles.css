@@ -1,0 +1,63 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffe0e9, #ffd6f5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #a0004c;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Encabezado principal */
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #c2185b;
+    margin-bottom: 30px;
+}
+
+h1 span {
+    font-size: 3rem;
+    color: #ff4081;
+}
+
+/* Contenedor del contador */
+#aniversary-date {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cada elemento del contador */
+#aniversary-date > div {
+    background-color: #fff0f5;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d81b60;
+    min-width: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación sutil */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#aniversary-date > div {
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Tipografía cursiva para ambiente romántico */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
