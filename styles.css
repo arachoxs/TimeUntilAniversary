@@ -1,3 +1,6 @@
+/* Importa tipografía cursiva para ambiente romántico */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 /* Estilo general */
 body {
     margin: 0;
@@ -10,7 +13,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* Encabezado principal */
@@ -19,6 +23,7 @@ h1 {
     font-family: 'Dancing Script', cursive;
     color: #c2185b;
     margin-bottom: 30px;
+    padding: 0 10px;
 }
 
 h1 span {
@@ -34,6 +39,8 @@ h1 span {
     padding: 20px 40px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Para que los elementos se acomoden si no caben */
+    justify-content: center;
 }
 
 /* Cada elemento del contador */
@@ -46,6 +53,7 @@ h1 span {
     color: #d81b60;
     min-width: 80px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: pulse 3s infinite ease-in-out;
 }
 
 /* Animación sutil */
@@ -55,9 +63,24 @@ h1 span {
     100% { transform: scale(1); }
 }
 
-#aniversary-date > div {
-    animation: pulse 3s infinite ease-in-out;
-}
+/* Responsive: ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
 
-/* Tipografía cursiva para ambiente romántico */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    h1 span {
+        font-size: 2.2rem;
+    }
+
+    #aniversary-date {
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    #aniversary-date > div {
+        font-size: 1rem;
+        padding: 10px 15px;
+        min-width: 60px;
+    }
+}
